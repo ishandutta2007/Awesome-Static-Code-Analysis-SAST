@@ -1,6 +1,6 @@
 # Awesome-Static-Code-Analysis-SAST
 
-# Top Static Code Analysis (SAST) Tools Ecosystem
+## Top Static Code Analysis (SAST) Tools Ecosystem
 
 **Curated List of SaaS Products & Open-Source GitHub Projects**  
 *Focused on Semantic Taint Analysis, Quality Gates & CI/CD Security Integration*  
