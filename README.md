@@ -5,7 +5,7 @@
 <p align="center">
   <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a>
   <a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
-  <a href="https://github.com/ishandutta2007/Awesome-Static-Code-Analysis-SAST/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Static-Code-Analysis-SAST?style=flat-square&logo=github&color=gold" alt="GitHub Stars" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Static-Code-Analysis-SAST/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Static-Code-Analysis-SAST?style=flat-square&logo=github&color=gold" alt="GitHub_Stars" /></a>
   <a href="https://github.com/ishandutta2007/Awesome-Static-Code-Analysis-SAST/network/members"><img src="https://img.shields.io/github/forks/ishandutta2007/Awesome-Static-Code-Analysis-SAST?style=flat-square&logo=github&color=blue" alt="GitHub Forks" /></a>
   <a href="https://github.com/ishandutta2007/Awesome-Static-Code-Analysis-SAST/pulls"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" alt="PRs Welcome" /></a>
   <a href="https://github.com/ishandutta2007/Awesome-Static-Code-Analysis-SAST/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square" alt="License: MIT" /></a>
@@ -64,121 +64,121 @@ The sector exhibits **moderate fragmentation**: while mega-scale platform incumb
 
 ## 💻 Open-Source GitHub Projects
 
-*Leading open-source SAST engines, linters, taint trackers, and secret scanners, sorted in descending order by GitHub star count.*
+*Leading open-source SAST engines, linters, taint trackers, and secret scanners, sorted in descending order by GitHub Stars_Count.*
 
-1. **[Ruff](https://github.com/astral-sh/ruff)** [![GitHub stars](https://img.shields.io/github/stars/astral-sh/ruff?style=social&color=white)](https://github.com/astral-sh/ruff/stargazers)  
+1. **[Ruff](https://github.com/astral-sh/ruff)** [![GitHub_Stars](https://img.shields.io/github/stars/astral-sh/ruff?style=social&color=white)](https://github.com/astral-sh/ruff/stargazers)  
    ⚡ **Extremely fast Python linter and code analyzer written in Rust.** Replaces Flake8, Black, and Bandit rules with 10–100x performance gains. Detects security flaws, injection hazards, and code smells in milliseconds.  
    *Best for: High-speed Python CI/CD pipelines and local pre-commit hooks.*
 
-2. **[ShellCheck](https://github.com/koalaman/shellcheck)** [![GitHub stars](https://img.shields.io/github/stars/koalaman/shellcheck?style=social&color=white)](https://github.com/koalaman/shellcheck/stargazers)  
+2. **[ShellCheck](https://github.com/koalaman/shellcheck)** [![GitHub_Stars](https://img.shields.io/github/stars/koalaman/shellcheck?style=social&color=white)](https://github.com/koalaman/shellcheck/stargazers)  
    🐚 **Static analysis and linting tool for shell scripts (Bash, Sh, Ksh).** Gives warnings and actionable advice for syntax errors, improper quoting, security pitfalls, and command-injection vulnerabilities.  
    *Best for: Hardening infrastructure provisioning scripts, DevOps pipelines, and Docker entrypoints.*
 
-3. **[Trivy](https://github.com/aquasecurity/trivy)** [![GitHub stars](https://img.shields.io/github/stars/aquasecurity/trivy?style=social&color=white)](https://github.com/aquasecurity/trivy/stargazers)  
+3. **[Trivy](https://github.com/aquasecurity/trivy)** [![GitHub_Stars](https://img.shields.io/github/stars/aquasecurity/trivy?style=social&color=white)](https://github.com/aquasecurity/trivy/stargazers)  
    🔍 **Comprehensive security scanner for code, containers, Kubernetes, and IaC.** Identifies known CVEs, hardcoded secrets, misconfigurations, and software licenses in seconds with versatile SARIF output.  
    *Best for: All-in-one DevSecOps pipeline gatekeeping.*
 
-4. **[Gitleaks](https://github.com/gitleaks/gitleaks)** [![GitHub stars](https://img.shields.io/github/stars/gitleaks/gitleaks?style=social&color=white)](https://github.com/gitleaks/gitleaks/stargazers)  
+4. **[Gitleaks](https://github.com/gitleaks/gitleaks)** [![GitHub_Stars](https://img.shields.io/github/stars/gitleaks/gitleaks?style=social&color=white)](https://github.com/gitleaks/gitleaks/stargazers)  
    🔑 **High-speed static secret detection engine in Go.** Scans git histories, commit diffs, and files for leaked API keys, tokens, SSH keys, and cloud credentials with custom regex and entropy scoring.  
    *Best for: Pre-commit prevention and retrospective repository credential discovery.*
 
-5. **[TruffleHog](https://github.com/trufflesecurity/trufflehog)** [![GitHub stars](https://img.shields.io/github/stars/trufflesecurity/trufflehog?style=social&color=white)](https://github.com/trufflesecurity/trufflehog/stargazers)  
+5. **[TruffleHog](https://github.com/trufflesecurity/trufflehog)** [![GitHub_Stars](https://img.shields.io/github/stars/trufflesecurity/trufflehog?style=social&color=white)](https://github.com/trufflesecurity/trufflehog/stargazers)  
    🐗 **Deep credential verification scanner.** Searches git branches, commit histories, filesystems, and S3 buckets for secrets, and actively verifies if detected API keys are live and active.  
    *Best for: Enterprise credential audits and real-world verified secret discovery.*
 
-6. **[SwiftLint](https://github.com/realm/SwiftLint)** [![GitHub stars](https://img.shields.io/github/stars/realm/SwiftLint?style=social&color=white)](https://github.com/realm/SwiftLint/stargazers)  
+6. **[SwiftLint](https://github.com/realm/SwiftLint)** [![GitHub_Stars](https://img.shields.io/github/stars/realm/SwiftLint?style=social&color=white)](https://github.com/realm/SwiftLint/stargazers)  
    🍏 **Static analysis and style enforcement tool for Swift.** Enforces code conventions, memory leak prevention, safety guidelines, and security best practices across iOS and macOS codebases.  
    *Best for: Apple ecosystem mobile and desktop application development.*
 
-7. **[Semgrep](https://github.com/semgrep/semgrep)** [![GitHub stars](https://img.shields.io/github/stars/semgrep/semgrep?style=social&color=white)](https://github.com/semgrep/semgrep/stargazers)  
+7. **[Semgrep](https://github.com/semgrep/semgrep)** [![GitHub_Stars](https://img.shields.io/github/stars/semgrep/semgrep?style=social&color=white)](https://github.com/semgrep/semgrep/stargazers)  
    🎯 **Lightweight, multi-language semantic SAST with intuitive YAML rules.** Scans 30+ programming languages without requiring build artifacts. Syntax-matching engine feels like `grep` with AST awareness.  
    *Best for: Fast CI/CD scans, custom security policy authoring, and guardrails without false-positive bloat.*
 
-8. **[PHPStan](https://github.com/phpstan/phpstan)** [![GitHub stars](https://img.shields.io/github/stars/phpstan/phpstan?style=social&color=white)](https://github.com/phpstan/phpstan/stargazers)  
+8. **[PHPStan](https://github.com/phpstan/phpstan)** [![GitHub_Stars](https://img.shields.io/github/stars/phpstan/phpstan?style=social&color=white)](https://github.com/phpstan/phpstan/stargazers)  
    🐘 **Static code analysis engine for PHP focusing on finding bugs before execution.** Detects type mismatches, null-pointer exceptions, dead code paths, and security flaws across complex PHP frameworks.  
    *Best for: Modern PHP, Laravel, and Symfony applications requiring strict static safety.*
 
-9. **[Hadolint](https://github.com/hadolint/hadolint)** [![GitHub stars](https://img.shields.io/github/stars/hadolint/hadolint?style=social&color=white)](https://github.com/hadolint/hadolint/stargazers)  
+9. **[Hadolint](https://github.com/hadolint/hadolint)** [![GitHub_Stars](https://img.shields.io/github/stars/hadolint/hadolint?style=social&color=white)](https://github.com/hadolint/hadolint/stargazers)  
    🐳 **Smart Dockerfile linter and static security checker written in Haskell.** Parses Dockerfile AST into rules enforcing container security hygiene, root-user prevention, and pinning practices.  
    *Best for: Container build hardening and supply chain security.*
 
-10. **[SonarQube Community Build](https://github.com/SonarSource/sonarqube)** [![GitHub stars](https://img.shields.io/github/stars/SonarSource/sonarqube?style=social&color=white)](https://github.com/SonarSource/sonarqube/stargazers)  
+10. **[SonarQube Community Build](https://github.com/SonarSource/sonarqube)** [![GitHub_Stars](https://img.shields.io/github/stars/SonarSource/sonarqube?style=social&color=white)](https://github.com/SonarSource/sonarqube/stargazers)  
     🏰 **Self-hosted code quality and security platform.** Scans 20+ languages for security hotspots, code smells, and common vulnerabilities; enforces customizable Quality Gates to fail broken builds.  
     *Best for: Centralized team dashboards, technical debt metrics, and continuous inspection.*
 
-11. **[CodeQL](https://github.com/github/codeql)** [![GitHub stars](https://img.shields.io/github/stars/github/codeql?style=social&color=white)](https://github.com/github/codeql/stargazers)  
+11. **[CodeQL](https://github.com/github/codeql)** [![GitHub_Stars](https://img.shields.io/github/stars/github/codeql?style=social&color=white)](https://github.com/github/codeql/stargazers)  
     🧠 **Industry-standard semantic code analysis and taint tracking engine.** Treats source code as a relational database, enabling expressive QL queries to trace dataflow paths from untrusted input to dangerous sinks.  
     *Best for: Vulnerability researchers, CVE hunting, and deep interprocedural analysis across C/C++, Java, Go, Python, and JavaScript.*
 
-12. **[Checkov](https://github.com/bridgecrewio/checkov)** [![GitHub stars](https://img.shields.io/github/stars/bridgecrewio/checkov?style=social&color=white)](https://github.com/bridgecrewio/checkov/stargazers)  
+12. **[Checkov](https://github.com/bridgecrewio/checkov)** [![GitHub_Stars](https://img.shields.io/github/stars/bridgecrewio/checkov?style=social&color=white)](https://github.com/bridgecrewio/checkov/stargazers)  
     ☁️ **Static analysis tool for Infrastructure as Code (IaC).** Ships with 1,000+ security policies for Terraform, CloudFormation, Kubernetes, Helm, Dockerfile, and ARM templates.  
     *Best for: Cloud security posture management and preventing misconfigurations before cloud provisioning.*
 
-13. **[gosec](https://github.com/securego/gosec)** [![GitHub stars](https://img.shields.io/github/stars/securego/gosec?style=social&color=white)](https://github.com/securego/gosec/stargazers)  
+13. **[gosec](https://github.com/securego/gosec)** [![GitHub_Stars](https://img.shields.io/github/stars/securego/gosec?style=social&color=white)](https://github.com/securego/gosec/stargazers)  
     🐹 **Security checker for Go source code.** Inspects Go AST to identify SQL injection, integer overflow, weak cryptography, unsafe memory pointers, and permissive file permissions.  
     *Best for: Cloud-native Go microservices, Kubernetes operators, and backend Go pipelines.*
 
-14. **[Bandit](https://github.com/PyCQA/bandit)** [![GitHub stars](https://img.shields.io/github/stars/PyCQA/bandit?style=social&color=white)](https://github.com/PyCQA/bandit/stargazers)  
+14. **[Bandit](https://github.com/PyCQA/bandit)** [![GitHub_Stars](https://img.shields.io/github/stars/PyCQA/bandit?style=social&color=white)](https://github.com/PyCQA/bandit/stargazers)  
     🐍 **Security-focused static analyzer for Python.** Inspects the abstract syntax tree for security issues like insecure deserialization (`pickle`), shell injections (`subprocess`), and weak hashing.  
     *Best for: Python backend services, Django/FastAPI applications, and security linting.*
 
-15. **[Brakeman](https://github.com/presidentbeef/brakeman)** [![GitHub stars](https://img.shields.io/github/stars/presidentbeef/brakeman?style=social&color=white)](https://github.com/presidentbeef/brakeman/stargazers)  
+15. **[Brakeman](https://github.com/presidentbeef/brakeman)** [![GitHub_Stars](https://img.shields.io/github/stars/presidentbeef/brakeman?style=social&color=white)](https://github.com/presidentbeef/brakeman/stargazers)  
     💎 **Framework-aware static security scanner specifically engineered for Ruby on Rails.** Understands Rails controllers, models, and routes to accurately pinpoint vulnerabilities without high false positives.  
     *Best for: Ruby on Rails applications, audits, and DevSecOps workflows.*
 
-16. **[Detekt](https://github.com/detekt/detekt)** [![GitHub stars](https://img.shields.io/github/stars/detekt/detekt?style=social&color=white)](https://github.com/detekt/detekt/stargazers)  
+16. **[Detekt](https://github.com/detekt/detekt)** [![GitHub_Stars](https://img.shields.io/github/stars/detekt/detekt?style=social&color=white)](https://github.com/detekt/detekt/stargazers)  
     ☕ **Static code analysis and code smell detection for Kotlin.** Features extensive rule sets for coroutine safety, security vulnerabilities, code complexity, and architectural integrity.  
     *Best for: Android and Kotlin multi-platform engineering pipelines.*
 
-17. **[cppcheck](https://github.com/cppcheck-opensource/cppcheck)** [![GitHub stars](https://img.shields.io/github/stars/cppcheck-opensource/cppcheck?style=social&color=white)](https://github.com/cppcheck-opensource/cppcheck/stargazers)  
+17. **[cppcheck](https://github.com/cppcheck-opensource/cppcheck)** [![GitHub_Stars](https://img.shields.io/github/stars/cppcheck-opensource/cppcheck?style=social&color=white)](https://github.com/cppcheck-opensource/cppcheck/stargazers)  
     ⚙️ **Static analysis tool for C/C++ code.** Focuses on undefined behavior, memory leaks, buffer overflows, out-of-bounds pointer arithmetic, and uninitialized variables with near-zero false positives.  
     *Best for: Embedded firmware, gaming engines, operating system drivers, and performance-critical C/C++.*
 
-18. **[Slither](https://github.com/crytic/slither)** [![GitHub stars](https://img.shields.io/github/stars/crytic/slither?style=social&color=white)](https://github.com/crytic/slither/stargazers)  
+18. **[Slither](https://github.com/crytic/slither)** [![GitHub_Stars](https://img.shields.io/github/stars/crytic/slither?style=social&color=white)](https://github.com/crytic/slither/stargazers)  
     🪙 **Static analysis framework for Solidity smart contracts.** Uncovers reentrancy vulnerabilities, logic errors, shadow variables, and gas optimizations in Ethereum contracts.  
     *Best for: Web3 protocol developers, DeFi engineers, and smart contract security auditors.*
 
-19. **[Psalm](https://github.com/vimeo/psalm)** [![GitHub stars](https://img.shields.io/github/stars/vimeo/psalm?style=social&color=white)](https://github.com/vimeo/psalm/stargazers)  
+19. **[Psalm](https://github.com/vimeo/psalm)** [![GitHub_Stars](https://img.shields.io/github/stars/vimeo/psalm?style=social&color=white)](https://github.com/vimeo/psalm/stargazers)  
     🛡️ **Static analysis tool for finding errors and security issues in PHP.** Developed by Vimeo, with built-in taint analysis to detect cross-site scripting (XSS) and SQL injection vulnerabilities.  
     *Best for: Enterprise PHP codebases demanding type safety and taint tracking.*
 
-20. **[PMD](https://github.com/pmd/pmd)** [![GitHub stars](https://img.shields.io/github/stars/pmd/pmd?style=social&color=white)](https://github.com/pmd/pmd/stargazers)  
+20. **[PMD](https://github.com/pmd/pmd)** [![GitHub_Stars](https://img.shields.io/github/stars/pmd/pmd?style=social&color=white)](https://github.com/pmd/pmd/stargazers)  
     ☕ **Extensible cross-language static rule engine.** Analyzes Java, JavaScript, Salesforce Apex, PL/SQL, Apache Velocity, and XML for suboptimal code, dead logic, and dangerous design patterns.  
     *Best for: Java enterprise ecosystems and Salesforce Apex compliance.*
 
-21. **[Terrascan](https://github.com/tenable/terrascan)** [![GitHub stars](https://img.shields.io/github/stars/tenable/terrascan?style=social&color=white)](https://github.com/tenable/terrascan/stargazers)  
+21. **[Terrascan](https://github.com/tenable/terrascan)** [![GitHub_Stars](https://img.shields.io/github/stars/tenable/terrascan?style=social&color=white)](https://github.com/tenable/terrascan/stargazers)  
     🏗️ **Static code analyzer for Infrastructure as Code by Tenable.** Evaluates Terraform, Kubernetes YAML, and Dockerfiles against 500+ security policies based on CIS benchmarks.  
     *Best for: Enforcing cloud security compliance across multiple cloud providers.*
 
-22. **[Mythril](https://github.com/ConsenSysDiligence/mythril)** [![GitHub stars](https://img.shields.io/github/stars/ConsenSysDiligence/mythril?style=social&color=white)](https://github.com/ConsenSysDiligence/mythril/stargazers)  
+22. **[Mythril](https://github.com/ConsenSysDiligence/mythril)** [![GitHub_Stars](https://img.shields.io/github/stars/ConsenSysDiligence/mythril?style=social&color=white)](https://github.com/ConsenSysDiligence/mythril/stargazers)  
     ⚡ **Security analysis tool for EVM bytecode.** Uses concolic analysis, taint analysis, and control-flow checking to detect vulnerabilities in Ethereum, Polygon, and Arbitrum smart contracts.  
     *Best for: Deep Web3 security verification and bytecode auditing.*
 
-23. **[SpotBugs](https://github.com/spotbugs/spotbugs)** [![GitHub stars](https://img.shields.io/github/stars/spotbugs/spotbugs?style=social&color=white)](https://github.com/spotbugs/spotbugs/stargazers)  
+23. **[SpotBugs](https://github.com/spotbugs/spotbugs)** [![GitHub_Stars](https://img.shields.io/github/stars/spotbugs/spotbugs?style=social&color=white)](https://github.com/spotbugs/spotbugs/stargazers)  
     🐞 **The spiritual successor to FindBugs for Java bytecode analysis.** Employs static analysis to identify hundreds of bug patterns, concurrency deadlocks, and null-pointer hazards.  
     *Best for: Automated Java bytecode scanning in Gradle and Maven pipelines.*
 
-24. **[Opengrep](https://github.com/opengrep/opengrep)** [![GitHub stars](https://img.shields.io/github/stars/opengrep/opengrep?style=social&color=white)](https://github.com/opengrep/opengrep/stargazers)  
+24. **[Opengrep](https://github.com/opengrep/opengrep)** [![GitHub_Stars](https://img.shields.io/github/stars/opengrep/opengrep?style=social&color=white)](https://github.com/opengrep/opengrep/stargazers)  
     🔓 **Community-driven LGPL-2.1 fork of Semgrep.** Preserves fully open-source static analysis capabilities, supporting custom YAML rules, SARIF reporting, and 30+ languages without proprietary telemetry.  
     *Best for: Privacy-first teams demanding an unencumbered open-source SAST core.*
 
-25. **[Bearer](https://github.com/Bearer/bearer)** [![GitHub stars](https://img.shields.io/github/stars/Bearer/bearer?style=social&color=white)](https://github.com/Bearer/bearer/stargazers)  
+25. **[Bearer](https://github.com/Bearer/bearer)** [![GitHub_Stars](https://img.shields.io/github/stars/Bearer/bearer?style=social&color=white)](https://github.com/Bearer/bearer/stargazers)  
     🔒 **Data security and privacy-focused SAST scanner.** Uses deep semantic dataflow analysis to map sensitive personal data (PII, PHI) leaks, missing encryption, and privacy compliance risks.  
     *Best for: GDPR, HIPAA, and SOC2 automated data-flow compliance verification.*
 
-26. **[KICS](https://github.com/Checkmarx/kics)** [![GitHub stars](https://img.shields.io/github/stars/Checkmarx/kics?style=social&color=white)](https://github.com/Checkmarx/kics/stargazers)  
+26. **[KICS](https://github.com/Checkmarx/kics)** [![GitHub_Stars](https://img.shields.io/github/stars/Checkmarx/kics?style=social&color=white)](https://github.com/Checkmarx/kics/stargazers)  
     🛡️ **Keeping Infrastructure as Code Secure (KICS) by Checkmarx.** Features 2,000+ queries covering Terraform, Kubernetes, Helm, CloudFormation, Ansible, and Dockerfiles.  
     *Best for: Enterprise multi-cloud IaC validation.*
 
-27. **[NodeJsScan](https://github.com/ajinabraham/nodejsscan)** [![GitHub stars](https://img.shields.io/github/stars/ajinabraham/nodejsscan?style=social&color=white)](https://github.com/ajinabraham/nodejsscan/stargazers)  
+27. **[NodeJsScan](https://github.com/ajinabraham/nodejsscan)** [![GitHub_Stars](https://img.shields.io/github/stars/ajinabraham/nodejsscan?style=social&color=white)](https://github.com/ajinabraham/nodejsscan/stargazers)  
     🟢 **Static security code scanner for Node.js and Express applications.** Identifies prototype pollution, NoSQL injection, code execution, and insecure Node.js dependencies.  
     *Best for: Node.js and JavaScript backend vulnerability audits.*
 
-28. **[Horusec](https://github.com/ZupIT/horusec)** [![GitHub stars](https://img.shields.io/github/stars/ZupIT/horusec?style=social&color=white)](https://github.com/ZupIT/horusec/stargazers)  
+28. **[Horusec](https://github.com/ZupIT/horusec)** [![GitHub_Stars](https://img.shields.io/github/stars/ZupIT/horusec?style=social&color=white)](https://github.com/ZupIT/horusec/stargazers)  
     🎼 **Multi-scanner SAST orchestrator.** Runs 20+ specialized security engines in parallel through a unified CLI, consolidating findings into clean SARIF reports with customizable triage flags.  
     *Best for: Polyglot monorepos needing unified multi-tool scanning.*
 
-29. **[Flawfinder](https://github.com/david-a-wheeler/flawfinder)** [![GitHub stars](https://img.shields.io/github/stars/david-a-wheeler/flawfinder?style=social&color=white)](https://github.com/david-a-wheeler/flawfinder/stargazers)  
+29. **[Flawfinder](https://github.com/david-a-wheeler/flawfinder)** [![GitHub_Stars](https://img.shields.io/github/stars/david-a-wheeler/flawfinder?style=social&color=white)](https://github.com/david-a-wheeler/flawfinder/stargazers)  
     🔎 **C/C++ source code vulnerability linter.** Quickly scans code against an internal database of unsafe functions (such as `strcpy`, `sprintf`, `gets`) and ranks flaws by severity score.  
     *Best for: Rapid legacy C/C++ security audits.*
 
@@ -225,7 +225,7 @@ Contributions, tool suggestions, and factual corrections are warmly welcomed!
 1. Fork this repository.
 2. Add your tool to the table (SaaS) or numbered list (Open Source), maintaining the existing format:
    - For **SaaS**: Include accurate starting price, free tier details, and company scale.
-   - For **Open Source**: Include the shields.io social star badge linking to the `/stargazers` page, language focus, and ideal use case.
+   - For **Open Source**: Include the shields.io social Stars_Badge linking to the `/stargazers` page, language focus, and ideal use case.
 3. Open a Pull Request with a clear description of why the tool should be added.
 
 For more awesome lists, explore the [Awesome Directory](https://github.com/ishandutta2007/Awesome-Awesome-Awesome).
@@ -254,3 +254,12 @@ Maintaining and continuously tracking this dynamic ecosystem takes time and ongo
 
 - This repository is a community-curated reference guide and does not constitute an endorsement or warranty of any specific product or platform.
 - Static application security testing tools vary significantly in analysis depth, rule precision, false-positive frequencies, and memory requirements. Always benchmark multiple tools against your organization's specific tech stack before establishing automated build-breaking policies.
+
+## Star History
+
+<a href="https://star-history.com/#ishandutta2007/Awesome-Static-Code-Analysis-SAST&Timeline" align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/ishandutta2007_Awesome-Static-Code-Analysis-SAST_growth.svg">
+    <img alt="Star History Chart" src="assets/ishandutta2007_Awesome-Static-Code-Analysis-SAST_growth.svg">
+  </picture>
+</a>
