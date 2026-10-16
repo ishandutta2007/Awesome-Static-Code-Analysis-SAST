@@ -1,142 +1,256 @@
-# Awesome-Static-Code-Analysis-SAST
+<div align="center">
+  <img src="assets/banner.svg" alt="Awesome Static Code Analysis and SAST Ecosystem" width="100%" />
+</div>
 
-## Top Static Code Analysis (SAST) Tools Ecosystem
-
-**Curated List of SaaS Products & Open-Source GitHub Projects**  
-*Focused on Semantic Taint Analysis, Quality Gates & CI/CD Security Integration*  
-**Last updated: March 2026**
-
-This repository tracks notable **SaaS platforms** and **open-source projects** for **Static Application Security Testing (SAST)**. These tools analyze source code, bytecode, and binaries without executing them — identifying injection flaws, insecure patterns, hardcoded secrets, and compliance violations before code reaches production.
-
-**Examples** include Veracode, Checkmarx, SonarQube, Snyk Code, Fortify, Mend.io, Rapid7 InsightAppSec, Coverity, GitHub Advanced Security, and Codacy (the category leaders).
-
-**Open-source emphasis**: This section is heavily expanded with every major active project for self-hosting, custom rule authoring, and transparent taint tracking — ideal for security engineers prioritizing code privacy, developers building DevSecOps pipelines, and organizations that need SAST depth without per-application enterprise licensing.
-
-Contributions welcome! Open a PR to add/update entries. Keep descriptions factual and link to official sites.
-
-## Table of Contents
-- [SaaS/Hosted Platforms](#saas-hosted-platforms)
-- [Open-Source GitHub Projects](#open-source-github-projects)
-- [How to Contribute](#how-to-contribute)
-- [Disclaimer](#disclaimer)
-
-## SaaS/Hosted Platforms
-
-- **[Veracode](https://www.veracode.com/)**  
-  **The reference enterprise SAST platform for regulated industries.** Mature **interprocedural taint engine** considered one of the most robust on the market, with the vendor claiming low false-positive rates . Supports static testing across **100+ languages and frameworks**, plus DAST and SCA in a unified cloud platform . **Risk Manager** aggregates and deduplicates findings from scanners you already run. **Veracode Fix** proposes AI-assisted remediations covering over 70% of detected flaws in 10 languages . **Compliance reporting** covers PCI DSS, HIPAA, OWASP, NIST SP 800-53, ISO 27001, SOC 2 Type II, GDPR, and DORA; SaaS platform holds **FedRAMP Moderate ATO** . **Limitations**: **No on-premise or air-gapped option** — excludes sectors with data residency requirements . No free tier; pricing negotiated per application through sales . Traditional model favors scheduled, upload-based scans, pushing findings to end of sprint rather than the moment code is written .
-
-- **[Checkmarx One](https://checkmarx.com/)**  
-  **The closest like-for-like competitor to Veracode on breadth and enterprise depth.** Cloud-native platform bundling **SAST, DAST, SCA, API security, IaC scanning, container security, and Codebashing** developer training . **Deep language and framework coverage**, particularly in Java and complex enterprise stacks . Named a Leader in the **2026 Gartner Magic Quadrant for Software Supply Chain Security** . **On-premise deployment available** for organizations with code residency requirements . **Compliance reporting** mapped to PCI DSS, HIPAA, OWASP, and GDPR with enterprise SIEM, ticketing, and GRC integrations . **Limitations**: **No free tier** — pricing only via sales . SAST engine historically **chatty on false positives** if left at default settings; budget time for triage tuning . Configuration and tuning take real effort .
-
-- **[SonarQube](https://www.sonarsource.com/)**  
-  **The most widely adopted code quality and security platform.** The **Community Build is free and open source**, covering **21 languages and frameworks** including Java, JavaScript, TypeScript, Python, C#, Go, Ruby, Terraform, Docker, Kubernetes, and more . Detects **bugs, basic vulnerabilities, security hotspots, and hardcoded secrets** with **quality gates** that fail builds when new code falls below standard . Tracks **technical debt** with effort estimates for prioritization . **CI/CD integration** with GitHub, GitLab, Bitbucket, and Azure DevOps; extensible with **50+ community plugins** . **Commercial editions** (Developer, Enterprise, Data Center) add **advanced SAST with taint analysis**, C/C++ support, branch/PR analysis, SCA, IaC analysis, and enterprise reporting . **Limitations**: **Security depth lower than Checkmarx** on Java and enterprise stacks . **No native DAST** — pair with a dedicated tool . **Community Build has limited security checks** — advanced SAST and secrets detection require Developer Edition . Self-hosting means running the database and scanners yourself.
-
-- **[Snyk Code](https://snyk.io/product/snyk-code/)**  
-  **Developer-first SAST with fast IDE and pull-request feedback.** Built for **shift-left workflows** — findings appear in the editor and CI pipeline rather than a separate portal . Strong **open source and dependency risk** focus alongside code scanning. **Limitations**: **Less depth on enterprise SAST** than Checkmarx or Veracode . **Cost at scale and alert volume** are recurring critiques .
-
-- **[Fortify (OpenText)](https://www.opentext.com/)**  
-  **Long-standing enterprise SAST** with broad language coverage and centralized policy management. Often shortlisted alongside Veracode and Checkmarx for **large compliance-driven AppSec programs** .
-
-- **[Mend.io](https://www.mend.io/)**  
-  **Unified governance for code and AI you build.** Pioneered enterprise **Software Composition Analysis**, now expanded to SAST, secrets detection, and reachability analysis . **AI-focused capabilities** include continuous AI behavioral testing and runtime in-application protection . Independent from model providers.
-
-- **[Rapid7 InsightAppSec](https://www.rapid7.com/)**  
-  **DAST-first platform with SAST capabilities** within the Rapid7 vulnerability management ecosystem. Best for teams already using Rapid7 for infrastructure scanning.
-
-- **[Coverity (Synopsys)](https://www.synopsys.com/)**  
-  **Pioneering SAST engine** known for deep static analysis of C/C++ and complex embedded systems. Strong in **safety-critical and regulated environments** where code cannot leave the perimeter.
-
-- **[GitHub Advanced Security](https://github.com/features/security/code)**  
-  **Native SAST within GitHub** powered by **CodeQL** — deep semantic analysis with the QL query language. **Free on public repositories**; **paid add-on for private repos** . Results post to the Security tab as severity-rated dataflow findings including taint, deserialization, SSRF, and command injection . Built by GitHub Security Lab for vulnerability research .
-
-- **[Codacy](https://www.codacy.com/)**  
-  **Automated code review platform** with static analysis, coverage tracking, and quality metrics. Simpler and cheaper than enterprise SAST for smaller teams.
-
-## Open-Source GitHub Projects
-
-- **[Semgrep](https://github.com/semgrep/semgrep)**  
-  **The leading open-source lightweight SAST** — 9,700+ GitHub stars . **Custom YAML rules** enable writing organization-specific security patterns without complex DSLs. **Supports 30+ languages** including C#, Go, Java, JavaScript, Python, Ruby, Rust, Scala, Terraform, TypeScript, and more . **Fast CI/CD integration** with SARIF output for PR annotations . The **Opengrep fork** (LGPL-2.1) provides a community-driven alternative with 30+ language support and Semgrep-compatible rules . **Best for teams wanting customizable, fast SAST without commercial licensing** .
-
-- **[CodeQL](https://github.com/github/codeql)**  
-  **Deep semantic analysis engine powering GitHub Advanced Security** — the standard CodeQL libraries and queries are **MIT licensed** . Uses **QL query language** for expressing complex dataflow and taint-tracking queries. **Supports ~17 languages** including C/C++, C#, Go, Java, JavaScript, Python, Ruby, Swift . **Built for vulnerability research** — GitHub Security Lab uses it to find CVEs in open source projects . **CodeQL CLI** is in a separate repository and licensed separately . **Best for security researchers and teams wanting deep semantic analysis with custom queries** .
-
-- **[SonarQube Community Build](https://github.com/SonarSource/sonarqube)**  
-  **The free, open-source edition of SonarQube** — **21 languages and frameworks** with static analysis for bugs, basic vulnerabilities, and security hotspots . **Quality gates** enforce standards on new code. **Technical debt tracking** with effort estimates. **CI/CD integration** with GitHub, GitLab, Bitbucket, Azure DevOps. **Extensible with 50+ community plugins** . **Limitations**: **No advanced SAST taint analysis** — that requires Developer Edition . **Single-threaded** and limited for large projects . **Best for small teams and individual developers** starting with code quality and basic security.
-
-- **[Bandit](https://github.com/PyCQA/bandit)**  
-  **Security linter for Python** — analyzes Python AST for common vulnerabilities and hardcoded secrets . Fast, focused, and widely adopted in Python CI pipelines. **Best for Python-specific security scanning** .
-
-- **[Brakeman](https://github.com/presidentbeef/brakeman)**  
-  **Deep Rails framework-aware analysis with low false positives** — understands Rails conventions and data flow . **Best for Ruby on Rails security** where generic SAST tools produce excessive noise .
-
-- **[gosec](https://github.com/securego/gosec)**  
-  **Security inspector for Go source code** — scans AST for vulnerabilities including injection, crypto misuse, and file permissions . **Best for Go security scanning** .
-
-- **[SpotBugs](https://github.com/spotbugs/spotbugs)**  
-  **Successor to FindBugs** — detects bug patterns in Java bytecode . Mature and widely integrated into Java build pipelines . **Best for Java bytecode analysis** .
-
-- **[PMD](https://github.com/pmd/pmd)**  
-  **Extensible multi-language analyzer** for Java, JavaScript, Swift, and more . Detects common flaws like unused variables and empty catch blocks . **Best for multi-language code quality** .
-
-- **[NodeJsScan](https://github.com/ajinabraham/nodejsscan)**  
-  **Static security code scanner for Node.js applications** — 2,300+ GitHub stars . Detects injection, insecure dependencies, and common Node.js vulnerabilities . **Best for Node.js security scanning** .
-
-- **[Flawfinder](https://github.com/david-a-wheeler/flawfinder)**  
-  **Built-in database of dangerous functions** (strcpy, gets, printf) for C/C++ . Simple and fast. **Best for quick C/C++ dangerous function detection** .
-
-- **[cppcheck](https://github.com/danmar/cppcheck)**  
-  **Focuses on errors compilers miss, aims for zero false positives** — static analysis for C/C++ . **Best for C/C++ where false positives are costly** .
-
-- **[Bearer](https://github.com/Bearer/bearer)**  
-  **Security and privacy-focused SAST** with data-flow analysis for **PII/PHI detection** — 1,800+ GitHub stars . Supports Go, Java, JS, PHP, Python, Ruby, TS . **Best for privacy compliance and data flow security** .
-
-- **[Horusec](https://github.com/ZupIT/horusec)**  
-  **Orchestrates 20+ SAST tools in one command** — 1,100+ GitHub stars . Great for **DevSecOps pipelines** wanting unified output across multiple scanners . Supports C#, Go, Java, JS, Kotlin, Python, Ruby, and more . **Best for orchestrating multiple SAST tools** .
-
-- **[Terrascan](https://github.com/tenable/terrascan)**  
-  **Compliance and security violation detection for Terraform, Kubernetes, and Docker** — 4,400+ GitHub stars . **Best for Infrastructure as Code security** .
-
-- **[Checkov](https://github.com/bridgecrewio/checkov)**  
-  **Static analysis for Terraform, CloudFormation, Kubernetes, and ARM** — IaC security scanning with 1,000+ policies . **Best for multi-cloud IaC security** .
-
-- **[KICS](https://github.com/Checkmarx/kics)**  
-  **2,000+ queries for infrastructure code** from Checkmarx — comprehensive IaC security scanning . **Best for deep IaC security coverage** .
-
-- **[gitleaks](https://github.com/gitleaks/gitleaks)**  
-  **Hardcoded secrets detection** for API keys, passwords, and tokens — 25,000+ GitHub stars . **Best for preventing secret leaks in Git history** .
-
-- **[TruffleHog](https://github.com/trufflesecurity/trufflehog)**  
-  **Deep credential scanning across Git repositories** — 25,000+ GitHub stars . **Best for comprehensive credential discovery** .
-
-- **[codegrep](https://github.com/deepusingh2530/codegrep)**  
-  **Fast, fully-offline SAST scanner in Rust** — curated MIT-original rule corpus across **27 languages** . **No network, no telemetry** . Features **diff-aware CI gating** (`--baseline main --diff-only`), **SARIF/JSON/JUnit output**, and **tree-sitter parsing** for Python, JavaScript, TypeScript, Go, Java, Ruby, PHP, C#, C, C++ . **Best for privacy-sensitive environments** where code cannot leave the perimeter .
-
-### Additional Strong Open-Source Options
-
-- **Globstar** — Fast, feature-rich open-source static analysis toolkit based on tree-sitter. MIT licensed .
-- **analysis-tools-dev/static-analysis** — Curated directory of static analysis tools with 12,800+ GitHub stars .
-- **ShiftLeftSecurity/sast-scan** — Free and open-source DevSecOps tool for SAST scanning, CI and Git friendly. 879 GitHub stars .
-- **betterscan** — Code Scanning/SAST/Static Analysis using many tools/scanners with one report. 764 GitHub stars .
-- **NodeSecure/js-x-ray** — JavaScript & Node.js open-source SAST scanner for detecting malicious patterns. 203 GitHub stars .
-
-**Frameworks for building custom systems**: Combine **Semgrep** for fast, customizable SAST with YAML rules, **CodeQL** for deep semantic taint analysis and vulnerability research, **SonarQube Community Build** for code quality plus basic security with quality gates, **gitleaks** and **TruffleHog** for secrets detection, and **Checkov** or **KICS** for Infrastructure as Code security — to build a complete self-hosted SAST pipeline covering code, dependencies, secrets, and infrastructure.
-
-## How to Contribute
-
-1. Fork the repo.
-2. Add/edit entries in `README.md` (follow existing format).
-3. Include: name, link, 1–2 sentence description, and whether it's SaaS or open-source.
-4. Submit PR with a short explanation.
-
-Star the repo if you find it useful!
-
-## Disclaimer
-
-- This is a **community-curated** list — not exhaustive and not an endorsement.
-- SAST tools differ significantly in analysis depth, false-positive rates, and deployment constraints. **Veracode has no on-premise option** — excludes defense, central banking, and critical infrastructure with code residency requirements . **SonarQube Community Build has limited security checks** — advanced SAST with taint analysis requires Developer Edition . **Checkmarx and Veracode SAST engines are chatty on false positives at default settings** — budget triage tuning time . **Migrating SAST tools mid-project is risky** — run old and new tools in parallel for 2-3 weeks without blocking merges before switching . **Alert fatigue is the main reason SAST fails in practice** — use baselining so only new findings break builds, limit PR scans to changed files, and prioritize IDE feedback over portal results .
-- Self-hosted open-source solutions require proper rule maintenance, database management for SonarQube, and integration with existing CI/CD pipelines.
+<p align="center">
+  <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a>
+  <a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Static-Code-Analysis-SAST/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Static-Code-Analysis-SAST?style=flat-square&logo=github&color=gold" alt="GitHub Stars" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Static-Code-Analysis-SAST/network/members"><img src="https://img.shields.io/github/forks/ishandutta2007/Awesome-Static-Code-Analysis-SAST?style=flat-square&logo=github&color=blue" alt="GitHub Forks" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Static-Code-Analysis-SAST/pulls"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" alt="PRs Welcome" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Static-Code-Analysis-SAST/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square" alt="License: MIT" /></a>
+  <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
+</p>
 
 ---
 
-**Made for security engineers, DevSecOps teams, application security architects, and developers building SAST into their workflows.**  
-Let's make static code analysis more open, accurate, and developer-friendly.
+# 🛡️ Awesome Static Code Analysis & SAST Tools
+
+> **A curated index of enterprise SaaS platforms and leading open-source GitHub projects for Static Application Security Testing (SAST), semantic taint analysis, automated quality gates, and DevSecOps CI/CD security integration.**
+
+Static Application Security Testing (**SAST**) scrutinizes source code, byte code, and compiled binaries in a non-runtime state to uncover high-impact vulnerabilities—including SQL/Command Injection (CWE-89, CWE-78), Cross-Site Scripting (XSS, CWE-79), Server-Side Request Forgery (SSRF, CWE-918), deserialization exploits, cryptographic misuse, and hardcoded secrets—before code merges into production.
+
+---
+
+## 📑 Table of Contents
+
+- [📊 Sector Overview & Market Dynamics](#-sector-overview--market-dynamics)
+- [🏢 SaaS & Hosted Commercial Platforms](#-saas--hosted-commercial-platforms)
+- [💻 Open-Source GitHub Projects](#-open-source-github-projects)
+- [🏗️ Blueprint: Building a Zero-Trust Self-Hosted SAST Pipeline](#️-blueprint-building-a-zero-trust-self-hosted-sast-pipeline)
+- [🤝 How to Contribute](#-how-to-contribute)
+- [⭐ Star History](#-star-history)
+- [💖 Support & Sponsoring](#-support--sponsoring)
+- [⚠️ Disclaimer](#️-disclaimer)
+
+---
+
+## 📊 Sector Overview & Market Dynamics
+
+The global **Static Application Security Testing (SAST)** and code security market was valued at approximately **$2.8 billion to $3.2 billion** and is projected to surpass **$7.5 billion+ by 2030**, advancing at a Compound Annual Growth Rate (CAGR) of **~17.4%** driven by aggressive shift-left security adoption, software supply chain mandates, and AI-assisted code generation risks.
+
+The sector exhibits **moderate fragmentation**: while mega-scale platform incumbents (Microsoft/GitHub, OpenText/Fortify, and Synopsys/Black Duck) capture heavyweight enterprise governance budgets, the market resists a "winner-take-all" outcome due to rapid developer migration toward fast, modular, rule-customizable AST engines (such as Semgrep, SonarQube, and Ruff) that easily embed directly into modern developer IDEs and decentralized CI/CD pipelines.
+
+---
+
+## 🏢 SaaS & Hosted Commercial Platforms
+
+*The table below compares leading commercial SAST vendors, sorted in descending order by parent company scale (valuation or market capitalization).*
+
+| 🏢 Platform | 📈 Company Scale (Valuation / Revenue) | 💡 Key Strengths & Capabilities | 💰 Starting Pricing | 🎁 Free Tier & Trial Limits |
+| :--- | :--- | :--- | :--- | :--- |
+| **[GitHub Advanced Security](https://github.com/features/security/code)** | **$3.1T+** Market Cap (Microsoft) / **$1B+** ARR | Native GitHub code scanning powered by CodeQL; deep semantic dataflow & taint queries; secret scanning with push protection; automated Dependabot triage. | **$49 / active committer / month** ($588/committer/yr) on GitHub Enterprise Cloud/Server | **Free forever** for all public GitHub repositories (unlimited CodeQL & secret scanning); **30-day free trial** for GitHub Enterprise Cloud. |
+| **[Fortify on Demand](https://www.opentext.com/products/fortify-on-demand)** | **$8.8B** Market Cap (OpenText) / **$5.8B** Revenue | Enterprise-grade interprocedural analysis; centralized regulatory compliance (PCI-DSS, NIST SP 800-53, HIPAA); hybrid on-prem & cloud orchestrations. | **$450 / month** ($5,400 / application target / year base assessment plan) | **15-day free trial** (covers full static scan & triage analysis for 1 production web application target); no free-forever plan. |
+| **[Snyk Code](https://snyk.io/product/snyk-code/)** | **$7.4B** Valuation / **$250M+** ARR | Developer-first AI-augmented static scanner; real-time in-IDE feedback and PR annotations; combined vulnerability, container, and SCA dependency insights. | **$25 / developer / month** ($300 / dev / yr billed annually for Snyk Team) | **Free forever plan**: Includes 100 code tests/month, 200 open-source tests/month, 100 container tests/month for 1 user seat. |
+| **[SonarQube Cloud](https://www.sonarsource.com/products/sonarcloud/)** | **$4.7B** Valuation (SonarSource) / **$120M+** ARR | Industry-standard Quality Gates; branch and pull request code hygiene; deep taint analysis across 26+ languages with clear remediation time estimates. | **$11 / month** (base tier covering up to 100,000 lines of code) | **Free forever** for all open-source & public repositories (unlimited LoC); **14-day free trial** for private repositories. |
+| **[Veracode](https://www.veracode.com/)** | **$2.5B** Valuation / **$280M+** ARR | Deep interprocedural taint engine designed for regulated industries; automated fix suggestions (Veracode Fix); FedRAMP Moderate ATO verified. | **$208 / month** ($2,499 / application / year base Essentials subscription) | **14-day free trial** (includes 1 complete application security scan and vulnerability report); no free-forever plan. |
+| **[Rapid7 InsightAppSec](https://www.rapid7.com/products/insightappsec/)** | **$2.4B** Market Cap / **$815M** Revenue | Combined dynamic and static discovery engine; universal vulnerability scoring; tight integration with Rapid7 InsightVM and enterprise SIEM workflows. | **$175 / month** ($2,100 / target / year billed annually) | **30-day free trial** (unrestricted testing for 1 active web application target); no free-forever plan. |
+| **[Coverity Polaris](https://www.blackduck.com/products/coverity-sast.html)** | **$2.1B** Valuation (Black Duck / Synopsys SIG) / **$450M** ARR | High-precision static analysis engine renowned for complex C/C++, embedded firmware, automotive, aerospace, and safety-critical enterprise systems. | **$350 / developer / month** ($4,200 / developer / year base Polaris seat) | **Free forever** via Coverity Scan for registered open-source projects (up to 4 builds/day); **14-day commercial trial** upon approval. |
+| **[Checkmarx One](https://checkmarx.com/)** | **$1.15B** Valuation / **$180M+** ARR | Unified enterprise AST suite spanning SAST, API Security, SCA, and IaC; deep Java/C# and legacy stack vulnerability mapping; on-prem deployment support. | **$59 / developer / month** ($708 / dev / year, minimum 10 developers = $7,080/yr) | **14-day free trial** on Checkmarx One sandbox (up to 2 code repositories evaluated); no free-forever plan for cloud platform. |
+| **[Mend.io](https://www.mend.io/)** | **$600M** Valuation / **$85M** ARR | Integrated SAST, container security, and dependency reachability analysis; AI model behavior testing; automated pull-request code remediation bots. | **$13.33 / developer / month** ($160 / dev / year billed annually) | **Free forever** via Mend Bolt GitHub integration (up to 5 repository scans/day); **14-day free trial** of full enterprise platform. |
+| **[Codacy](https://www.codacy.com/)** | **$120M** Valuation / **$15M** ARR | Automated code review platform combining static analysis, code coverage tracking, security rule enforcement, and engineering metrics in one dashboard. | **$15 / developer / month** ($180 / developer / year billed annually for Pro) | **Free forever** for public open-source repositories and up to 4 private repos for small teams; **14-day free trial** of Pro tier. |
+
+---
+
+## 💻 Open-Source GitHub Projects
+
+*Leading open-source SAST engines, linters, taint trackers, and secret scanners, sorted in descending order by GitHub star count.*
+
+1. **[Ruff](https://github.com/astral-sh/ruff)** [![GitHub stars](https://img.shields.io/github/stars/astral-sh/ruff?style=social&color=white)](https://github.com/astral-sh/ruff/stargazers)  
+   ⚡ **Extremely fast Python linter and code analyzer written in Rust.** Replaces Flake8, Black, and Bandit rules with 10–100x performance gains. Detects security flaws, injection hazards, and code smells in milliseconds.  
+   *Best for: High-speed Python CI/CD pipelines and local pre-commit hooks.*
+
+2. **[ShellCheck](https://github.com/koalaman/shellcheck)** [![GitHub stars](https://img.shields.io/github/stars/koalaman/shellcheck?style=social&color=white)](https://github.com/koalaman/shellcheck/stargazers)  
+   🐚 **Static analysis and linting tool for shell scripts (Bash, Sh, Ksh).** Gives warnings and actionable advice for syntax errors, improper quoting, security pitfalls, and command-injection vulnerabilities.  
+   *Best for: Hardening infrastructure provisioning scripts, DevOps pipelines, and Docker entrypoints.*
+
+3. **[Trivy](https://github.com/aquasecurity/trivy)** [![GitHub stars](https://img.shields.io/github/stars/aquasecurity/trivy?style=social&color=white)](https://github.com/aquasecurity/trivy/stargazers)  
+   🔍 **Comprehensive security scanner for code, containers, Kubernetes, and IaC.** Identifies known CVEs, hardcoded secrets, misconfigurations, and software licenses in seconds with versatile SARIF output.  
+   *Best for: All-in-one DevSecOps pipeline gatekeeping.*
+
+4. **[Gitleaks](https://github.com/gitleaks/gitleaks)** [![GitHub stars](https://img.shields.io/github/stars/gitleaks/gitleaks?style=social&color=white)](https://github.com/gitleaks/gitleaks/stargazers)  
+   🔑 **High-speed static secret detection engine in Go.** Scans git histories, commit diffs, and files for leaked API keys, tokens, SSH keys, and cloud credentials with custom regex and entropy scoring.  
+   *Best for: Pre-commit prevention and retrospective repository credential discovery.*
+
+5. **[TruffleHog](https://github.com/trufflesecurity/trufflehog)** [![GitHub stars](https://img.shields.io/github/stars/trufflesecurity/trufflehog?style=social&color=white)](https://github.com/trufflesecurity/trufflehog/stargazers)  
+   🐗 **Deep credential verification scanner.** Searches git branches, commit histories, filesystems, and S3 buckets for secrets, and actively verifies if detected API keys are live and active.  
+   *Best for: Enterprise credential audits and real-world verified secret discovery.*
+
+6. **[SwiftLint](https://github.com/realm/SwiftLint)** [![GitHub stars](https://img.shields.io/github/stars/realm/SwiftLint?style=social&color=white)](https://github.com/realm/SwiftLint/stargazers)  
+   🍏 **Static analysis and style enforcement tool for Swift.** Enforces code conventions, memory leak prevention, safety guidelines, and security best practices across iOS and macOS codebases.  
+   *Best for: Apple ecosystem mobile and desktop application development.*
+
+7. **[Semgrep](https://github.com/semgrep/semgrep)** [![GitHub stars](https://img.shields.io/github/stars/semgrep/semgrep?style=social&color=white)](https://github.com/semgrep/semgrep/stargazers)  
+   🎯 **Lightweight, multi-language semantic SAST with intuitive YAML rules.** Scans 30+ programming languages without requiring build artifacts. Syntax-matching engine feels like `grep` with AST awareness.  
+   *Best for: Fast CI/CD scans, custom security policy authoring, and guardrails without false-positive bloat.*
+
+8. **[PHPStan](https://github.com/phpstan/phpstan)** [![GitHub stars](https://img.shields.io/github/stars/phpstan/phpstan?style=social&color=white)](https://github.com/phpstan/phpstan/stargazers)  
+   🐘 **Static code analysis engine for PHP focusing on finding bugs before execution.** Detects type mismatches, null-pointer exceptions, dead code paths, and security flaws across complex PHP frameworks.  
+   *Best for: Modern PHP, Laravel, and Symfony applications requiring strict static safety.*
+
+9. **[Hadolint](https://github.com/hadolint/hadolint)** [![GitHub stars](https://img.shields.io/github/stars/hadolint/hadolint?style=social&color=white)](https://github.com/hadolint/hadolint/stargazers)  
+   🐳 **Smart Dockerfile linter and static security checker written in Haskell.** Parses Dockerfile AST into rules enforcing container security hygiene, root-user prevention, and pinning practices.  
+   *Best for: Container build hardening and supply chain security.*
+
+10. **[SonarQube Community Build](https://github.com/SonarSource/sonarqube)** [![GitHub stars](https://img.shields.io/github/stars/SonarSource/sonarqube?style=social&color=white)](https://github.com/SonarSource/sonarqube/stargazers)  
+    🏰 **Self-hosted code quality and security platform.** Scans 20+ languages for security hotspots, code smells, and common vulnerabilities; enforces customizable Quality Gates to fail broken builds.  
+    *Best for: Centralized team dashboards, technical debt metrics, and continuous inspection.*
+
+11. **[CodeQL](https://github.com/github/codeql)** [![GitHub stars](https://img.shields.io/github/stars/github/codeql?style=social&color=white)](https://github.com/github/codeql/stargazers)  
+    🧠 **Industry-standard semantic code analysis and taint tracking engine.** Treats source code as a relational database, enabling expressive QL queries to trace dataflow paths from untrusted input to dangerous sinks.  
+    *Best for: Vulnerability researchers, CVE hunting, and deep interprocedural analysis across C/C++, Java, Go, Python, and JavaScript.*
+
+12. **[Checkov](https://github.com/bridgecrewio/checkov)** [![GitHub stars](https://img.shields.io/github/stars/bridgecrewio/checkov?style=social&color=white)](https://github.com/bridgecrewio/checkov/stargazers)  
+    ☁️ **Static analysis tool for Infrastructure as Code (IaC).** Ships with 1,000+ security policies for Terraform, CloudFormation, Kubernetes, Helm, Dockerfile, and ARM templates.  
+    *Best for: Cloud security posture management and preventing misconfigurations before cloud provisioning.*
+
+13. **[gosec](https://github.com/securego/gosec)** [![GitHub stars](https://img.shields.io/github/stars/securego/gosec?style=social&color=white)](https://github.com/securego/gosec/stargazers)  
+    🐹 **Security checker for Go source code.** Inspects Go AST to identify SQL injection, integer overflow, weak cryptography, unsafe memory pointers, and permissive file permissions.  
+    *Best for: Cloud-native Go microservices, Kubernetes operators, and backend Go pipelines.*
+
+14. **[Bandit](https://github.com/PyCQA/bandit)** [![GitHub stars](https://img.shields.io/github/stars/PyCQA/bandit?style=social&color=white)](https://github.com/PyCQA/bandit/stargazers)  
+    🐍 **Security-focused static analyzer for Python.** Inspects the abstract syntax tree for security issues like insecure deserialization (`pickle`), shell injections (`subprocess`), and weak hashing.  
+    *Best for: Python backend services, Django/FastAPI applications, and security linting.*
+
+15. **[Brakeman](https://github.com/presidentbeef/brakeman)** [![GitHub stars](https://img.shields.io/github/stars/presidentbeef/brakeman?style=social&color=white)](https://github.com/presidentbeef/brakeman/stargazers)  
+    💎 **Framework-aware static security scanner specifically engineered for Ruby on Rails.** Understands Rails controllers, models, and routes to accurately pinpoint vulnerabilities without high false positives.  
+    *Best for: Ruby on Rails applications, audits, and DevSecOps workflows.*
+
+16. **[Detekt](https://github.com/detekt/detekt)** [![GitHub stars](https://img.shields.io/github/stars/detekt/detekt?style=social&color=white)](https://github.com/detekt/detekt/stargazers)  
+    ☕ **Static code analysis and code smell detection for Kotlin.** Features extensive rule sets for coroutine safety, security vulnerabilities, code complexity, and architectural integrity.  
+    *Best for: Android and Kotlin multi-platform engineering pipelines.*
+
+17. **[cppcheck](https://github.com/cppcheck-opensource/cppcheck)** [![GitHub stars](https://img.shields.io/github/stars/cppcheck-opensource/cppcheck?style=social&color=white)](https://github.com/cppcheck-opensource/cppcheck/stargazers)  
+    ⚙️ **Static analysis tool for C/C++ code.** Focuses on undefined behavior, memory leaks, buffer overflows, out-of-bounds pointer arithmetic, and uninitialized variables with near-zero false positives.  
+    *Best for: Embedded firmware, gaming engines, operating system drivers, and performance-critical C/C++.*
+
+18. **[Slither](https://github.com/crytic/slither)** [![GitHub stars](https://img.shields.io/github/stars/crytic/slither?style=social&color=white)](https://github.com/crytic/slither/stargazers)  
+    🪙 **Static analysis framework for Solidity smart contracts.** Uncovers reentrancy vulnerabilities, logic errors, shadow variables, and gas optimizations in Ethereum contracts.  
+    *Best for: Web3 protocol developers, DeFi engineers, and smart contract security auditors.*
+
+19. **[Psalm](https://github.com/vimeo/psalm)** [![GitHub stars](https://img.shields.io/github/stars/vimeo/psalm?style=social&color=white)](https://github.com/vimeo/psalm/stargazers)  
+    🛡️ **Static analysis tool for finding errors and security issues in PHP.** Developed by Vimeo, with built-in taint analysis to detect cross-site scripting (XSS) and SQL injection vulnerabilities.  
+    *Best for: Enterprise PHP codebases demanding type safety and taint tracking.*
+
+20. **[PMD](https://github.com/pmd/pmd)** [![GitHub stars](https://img.shields.io/github/stars/pmd/pmd?style=social&color=white)](https://github.com/pmd/pmd/stargazers)  
+    ☕ **Extensible cross-language static rule engine.** Analyzes Java, JavaScript, Salesforce Apex, PL/SQL, Apache Velocity, and XML for suboptimal code, dead logic, and dangerous design patterns.  
+    *Best for: Java enterprise ecosystems and Salesforce Apex compliance.*
+
+21. **[Terrascan](https://github.com/tenable/terrascan)** [![GitHub stars](https://img.shields.io/github/stars/tenable/terrascan?style=social&color=white)](https://github.com/tenable/terrascan/stargazers)  
+    🏗️ **Static code analyzer for Infrastructure as Code by Tenable.** Evaluates Terraform, Kubernetes YAML, and Dockerfiles against 500+ security policies based on CIS benchmarks.  
+    *Best for: Enforcing cloud security compliance across multiple cloud providers.*
+
+22. **[Mythril](https://github.com/ConsenSysDiligence/mythril)** [![GitHub stars](https://img.shields.io/github/stars/ConsenSysDiligence/mythril?style=social&color=white)](https://github.com/ConsenSysDiligence/mythril/stargazers)  
+    ⚡ **Security analysis tool for EVM bytecode.** Uses concolic analysis, taint analysis, and control-flow checking to detect vulnerabilities in Ethereum, Polygon, and Arbitrum smart contracts.  
+    *Best for: Deep Web3 security verification and bytecode auditing.*
+
+23. **[SpotBugs](https://github.com/spotbugs/spotbugs)** [![GitHub stars](https://img.shields.io/github/stars/spotbugs/spotbugs?style=social&color=white)](https://github.com/spotbugs/spotbugs/stargazers)  
+    🐞 **The spiritual successor to FindBugs for Java bytecode analysis.** Employs static analysis to identify hundreds of bug patterns, concurrency deadlocks, and null-pointer hazards.  
+    *Best for: Automated Java bytecode scanning in Gradle and Maven pipelines.*
+
+24. **[Opengrep](https://github.com/opengrep/opengrep)** [![GitHub stars](https://img.shields.io/github/stars/opengrep/opengrep?style=social&color=white)](https://github.com/opengrep/opengrep/stargazers)  
+    🔓 **Community-driven LGPL-2.1 fork of Semgrep.** Preserves fully open-source static analysis capabilities, supporting custom YAML rules, SARIF reporting, and 30+ languages without proprietary telemetry.  
+    *Best for: Privacy-first teams demanding an unencumbered open-source SAST core.*
+
+25. **[Bearer](https://github.com/Bearer/bearer)** [![GitHub stars](https://img.shields.io/github/stars/Bearer/bearer?style=social&color=white)](https://github.com/Bearer/bearer/stargazers)  
+    🔒 **Data security and privacy-focused SAST scanner.** Uses deep semantic dataflow analysis to map sensitive personal data (PII, PHI) leaks, missing encryption, and privacy compliance risks.  
+    *Best for: GDPR, HIPAA, and SOC2 automated data-flow compliance verification.*
+
+26. **[KICS](https://github.com/Checkmarx/kics)** [![GitHub stars](https://img.shields.io/github/stars/Checkmarx/kics?style=social&color=white)](https://github.com/Checkmarx/kics/stargazers)  
+    🛡️ **Keeping Infrastructure as Code Secure (KICS) by Checkmarx.** Features 2,000+ queries covering Terraform, Kubernetes, Helm, CloudFormation, Ansible, and Dockerfiles.  
+    *Best for: Enterprise multi-cloud IaC validation.*
+
+27. **[NodeJsScan](https://github.com/ajinabraham/nodejsscan)** [![GitHub stars](https://img.shields.io/github/stars/ajinabraham/nodejsscan?style=social&color=white)](https://github.com/ajinabraham/nodejsscan/stargazers)  
+    🟢 **Static security code scanner for Node.js and Express applications.** Identifies prototype pollution, NoSQL injection, code execution, and insecure Node.js dependencies.  
+    *Best for: Node.js and JavaScript backend vulnerability audits.*
+
+28. **[Horusec](https://github.com/ZupIT/horusec)** [![GitHub stars](https://img.shields.io/github/stars/ZupIT/horusec?style=social&color=white)](https://github.com/ZupIT/horusec/stargazers)  
+    🎼 **Multi-scanner SAST orchestrator.** Runs 20+ specialized security engines in parallel through a unified CLI, consolidating findings into clean SARIF reports with customizable triage flags.  
+    *Best for: Polyglot monorepos needing unified multi-tool scanning.*
+
+29. **[Flawfinder](https://github.com/david-a-wheeler/flawfinder)** [![GitHub stars](https://img.shields.io/github/stars/david-a-wheeler/flawfinder?style=social&color=white)](https://github.com/david-a-wheeler/flawfinder/stargazers)  
+    🔎 **C/C++ source code vulnerability linter.** Quickly scans code against an internal database of unsafe functions (such as `strcpy`, `sprintf`, `gets`) and ranks flaws by severity score.  
+    *Best for: Rapid legacy C/C++ security audits.*
+
+---
+
+## 🏗️ Blueprint: Building a Zero-Trust Self-Hosted SAST Pipeline
+
+A resilient, enterprise-grade DevSecOps security architecture can be built by chaining specialized open-source tools to avoid vendor lock-in:
+
+```
+          ┌──────────────────────────────────────────────────────────┐
+          │                    Developer Workspace                   │
+          │      IDE Plugins (Semgrep / Ruff / ShellCheck)           │
+          └────────────────────────────┬─────────────────────────────┘
+                                       │ git commit / push
+                                       ▼
+ ┌─────────────────────────────────────────────────────────────────────────────┐
+ │                         Continuous Integration (CI)                         │
+ │                                                                             │
+ │  1. Secrets & Credentials:     Gitleaks / TruffleHog                        │
+ │  2. Fast Lint & Syntax SAST:   Ruff / ShellCheck / Hadolint                 │
+ │  3. Semantic Code Analysis:    Semgrep (Custom YAML) / Opengrep             │
+ │  4. Deep Taint / Path Flow:    CodeQL (Database build & query run)          │
+ │  5. Infrastructure as Code:   Checkov / KICS (Terraform & K8s)             │
+ │  6. Data Flow & PII Audit:     Bearer (Data privacy boundaries)             │
+ └─────────────────────────────────────┬───────────────────────────────────────┘
+                                       │ SARIF / JSON Upload
+                                       ▼
+          ┌──────────────────────────────────────────────────────────┐
+          │               Quality Gate & PR Enforcement              │
+          │   Block merge if Critical/High vulnerabilities detected  │
+          └──────────────────────────────────────────────────────────┘
+```
+
+- **Avoid Alert Fatigue**: Enforce baselining (`--diff-only` on pull requests) so newly introduced flaws block merges, while legacy debt is systematically tackled in dedicated sprints.
+- **Unified Reporting**: Standardize scanner outputs on **SARIF (OASIS Static Analysis Results Interchange Format)** to aggregate findings into GitHub Security Advisories or a DefectDojo dashboard.
+
+---
+
+## 🤝 How to Contribute
+
+Contributions, tool suggestions, and factual corrections are warmly welcomed!
+
+1. Fork this repository.
+2. Add your tool to the table (SaaS) or numbered list (Open Source), maintaining the existing format:
+   - For **SaaS**: Include accurate starting price, free tier details, and company scale.
+   - For **Open Source**: Include the shields.io social star badge linking to the `/stargazers` page, language focus, and ideal use case.
+3. Open a Pull Request with a clear description of why the tool should be added.
+
+For more awesome lists, explore the [Awesome Directory](https://github.com/ishandutta2007/Awesome-Awesome-Awesome).
+
+---
+
+## ⭐ Star History
+
+[![Star History Chart](https://star-history.dera.page/svg?repos=ishandutta2007/Awesome-Static-Code-Analysis-SAST&type=date&legend=top-left)](https://star-history.dera.page/#ishandutta2007/Awesome-Static-Code-Analysis-SAST&type=date&legend=top-left)
+
+---
+
+## 💖 Support & Sponsoring
+
+Thank you for exploring and utilizing the **Awesome Static Code Analysis & SAST** repository! 
+
+Maintaining and continuously tracking this dynamic ecosystem takes time and ongoing research. If you find this directory valuable for your organization, team, or personal learning:
+
+- ⭐ **Star this repository** to improve visibility for the security community.
+- 🍴 **Fork and share** with colleagues, AppSec teams, and DevSecOps practitioners.
+- ☕ **Sponsor or buy a coffee**: Support maintenance and updates via the [GitHub Sponsor Dashboard](https://github.com/sponsors/ishandutta2007).
+
+---
+
+## ⚠️ Disclaimer
+
+- This repository is a community-curated reference guide and does not constitute an endorsement or warranty of any specific product or platform.
+- Static application security testing tools vary significantly in analysis depth, rule precision, false-positive frequencies, and memory requirements. Always benchmark multiple tools against your organization's specific tech stack before establishing automated build-breaking policies.
